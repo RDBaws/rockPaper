@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -21,11 +20,26 @@
             }
 
             function computerMove(){
-                autoMove();
-                return moveMade;
+                let move = autoMove();
+                if(move <=1){
+                    return 1;
+                }else if(move <=2){
+                    return 2;
+                }
+                else{
+                    return 3;
+                }
             }
 
-            function userMove(move){}
+            function userMove(move){
+                if(move.toUpperCase() == "ROCK"){
+                    return 1;
+                }else if(move.toUpperCase() == "paper"){
+                    return 2;
+                }else{
+                    return 3;
+                }
+            }
 
             function game(){}
 
